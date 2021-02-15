@@ -20,17 +20,17 @@ var app = express();
 var server = http.createServer(app);
 
 async.waterfall([
-		function load_helpers(callback) {
-			var target = __dirname+'/app/helpers/';
+	function load_helpers(callback) {
+		var target = __dirname+'/app/helpers/';
 
-			fs.readdirSync(target).filter(file => {
-				return (file.slice(-3) === '.js');
-			}).forEach(file => {
-				Object.assign(Helpers, {[pathinfo(file).filename] : require(path.join(target, file))});
-			});
+		fs.readdirSync(target).filter(file => {
+			return (file.slice(-3) === '.js');
+		}).forEach(file => {
+			Object.assign(Helpers, {[pathinfo(file).filename] : require(path.join(target, file))});
+		});
 
-			callback(null, callback);
-		}
+		callback(null, callback);
+	}
 
 ], (error, success) => {
 	if (error) {
