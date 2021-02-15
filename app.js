@@ -1,13 +1,16 @@
 Config = require('./app/config/config');
 Socketio = require('socket.io')({ path : '/bote' });
+Helpers = {};
 Socketio.sockets.setMaxListeners(0);
 
+var fs = require('fs');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var http = require('http');
 var cors = require('cors');
 var async = require('async');
+var pathinfo = require('locutus/php/filesystem/pathinfo');
 var cookieParser = require('cookie-parser');
 var moment = require('moment');
 var moment_timezone = require('moment-timezone');
@@ -17,11 +20,15 @@ var app = express();
 var server = http.createServer(app);
 
 async.waterfall([
-		function example_function(callback) {
-			callback(null, callback);
-		},
+		function load_helpers(callback) {
+			var target = __dirname+'/app/helpers/';
 
-		function next_sample_function(error, callback) {
+			fs.readdirSync(target).filter(file => {
+				return (file !== path.basename(__filename) && (file.slice(-3) === '.js'));
+			}).forEach(file => {
+				Object.assign(Helpers, {[pathinfo(file).filename] : require(path.join(target, file))});
+			});
+
 			callback(null, callback);
 		}
 
