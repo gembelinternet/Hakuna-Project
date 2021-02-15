@@ -1,7 +1,6 @@
 Config = require('./app/config/config');
 Socketio = require('socket.io')({ path : '/bote' });
 Helpers = {};
-Socketio.sockets.setMaxListeners(0);
 
 var fs = require('fs');
 var createError = require('http-errors');
@@ -69,4 +68,5 @@ app.use(function(err, req, res, next) {
 	res.render('error');
 });
 
+Socketio.sockets.setMaxListeners(0);
 Socketio.listen(server.listen(process.env.PORT || Config.port))
