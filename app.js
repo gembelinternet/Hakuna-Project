@@ -24,7 +24,7 @@ async.waterfall([
 			var target = __dirname+'/app/helpers/';
 
 			fs.readdirSync(target).filter(file => {
-				return (file !== path.basename(__filename) && (file.slice(-3) === '.js'));
+				return (file.slice(-3) === '.js');
 			}).forEach(file => {
 				Object.assign(Helpers, {[pathinfo(file).filename] : require(path.join(target, file))});
 			});
