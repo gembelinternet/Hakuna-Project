@@ -69,4 +69,4 @@ app.use(function(err, req, res, next) {
 });
 
 Socketio.sockets.setMaxListeners(0);
-Socketio.listen(server.listen(process.env.PORT || Config.port))
+Socketio.listen(server.listen(process.env.PORT || Config.port));

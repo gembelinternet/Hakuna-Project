@@ -11,7 +11,7 @@ module.exports.rethinkdb = {
 		host: '',
 		port: ''
 	}
-}
+};
 
 /**
  * MongoDB database config
@@ -19,3 +19,5 @@ module.exports.rethinkdb = {
 module.exports.mongodb = {
 	default: ''
 };
+
+module.exports.telegram_bot = {};
