@@ -42,17 +42,21 @@ module.exports.callback = function(callback) {
 /**
  * Check is valid JSON
  *
- * @param      {string}   jsonString  JSON string
+ * @param      {string}   JSONorObject  JSON string
  * @return     {boolean}
  */
-module.exports.isValidJSON = function(jsonString) {
-	try {
-		var o = JSON.parse(jsonString);
-		if (o && typeof o === "object") {
-			return o;
+module.exports.isValidJSON = function(JSONorObject) {
+	if (typeof JSONorObject == 'object') {
+		return true;
+	} else {
+		try {
+			var o = JSON.parse(JSONorObject);
+			if (o && typeof o === "object") {
+				return o;
+			}
+		} catch (e) {
+			return false;
 		}
-	} catch (e) {
-		return false;
 	}
 };
 
