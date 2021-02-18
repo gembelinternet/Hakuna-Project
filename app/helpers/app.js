@@ -40,6 +40,23 @@ module.exports.callback = function(callback) {
 }
 
 /**
+ * Check is valid JSON
+ *
+ * @param      {string}   jsonString  JSON string
+ * @return     {boolean}
+ */
+module.exports.isValidJSON = function(jsonString) {
+	try {
+		var o = JSON.parse(jsonString);
+		if (o && typeof o === "object") {
+			return o;
+		}
+	} catch (e) {
+		return false;
+	}
+};
+
+/**
  * Promise handler
  */
 module.exports.promise = function(error) {
