@@ -1,6 +1,6 @@
 {
-	"name": "base",
-	"version": "0.0.0",
+	"name": "hakuna-project",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"start": "node ./app"
