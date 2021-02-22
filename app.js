@@ -2,6 +2,8 @@ Config = require('./app/config/config');
 Socketio = require('socket.io')({ path : '/bote' });
 Helpers = {};
 
+Hakuna = require(__dirname+'/app/libraries/Hakuna');
+
 var fs = require('fs');
 var createError = require('http-errors');
 var express = require('express');
