@@ -18,8 +18,8 @@ Hakuna.Room().top().then(response => {
 **Example**
 
 ```javascript
-var myHakuna = new Hakuna('REPLACE-YOUR-BEARER-TOKEN-HERE');
-Hakuna.User().lookup_by_hakuna_id('m2c044bkvnax722').then(response => {
+var MyHakuna = new Hakuna('REPLACE-YOUR-BEARER-TOKEN-HERE');
+MyHakuna.User().lookup_by_hakuna_id('m2c044bkvnax722').then(response => {
 	console.log(response.data)
 }, Helpers.app.promise);
 ```
