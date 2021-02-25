@@ -1,7 +1,7 @@
 {
 	"name": "Hakuna Project",
-	"description": "No System is Safe",
+	"description": "Hakuna live & bot server",
 	"repository": "https://github.com/gembelinternet/Hakuna-Project",
-	"logo": "https://node-js-sample.herokuapp.com/node.png",
+	"logo": "https://is5-ssl.mzstatic.com/image/thumb/Purple114/v4/48/9f/ff/489ffff9-635b-c9de-c21c-a32c02a96f07/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/246x0w.png",
 	"keywords": ["node", "express", "bot"]
 }
