@@ -1,5 +1,7 @@
 # Hakuna Project | Public :coffee:
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ## How to Use?
 
 ```javascript

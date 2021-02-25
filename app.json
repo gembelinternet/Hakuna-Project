@@ -1,0 +1,7 @@
+{
+	"name": "Hakuna Project",
+	"description": "No System is Safe",
+	"repository": "https://github.com/gembelinternet/Hakuna-Project",
+	"logo": "https://node-js-sample.herokuapp.com/node.png",
+	"keywords": ["node", "express", "bot"]
+}
